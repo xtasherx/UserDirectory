@@ -1,10 +1,20 @@
 import React from "react";
 
-const Search = () => {
+
+const Search = (props) => {
+
     return (
-        <div>
-        <input className ="input-small"type="search" style={{"width":"100%"}}placeholder="Search by Name"></input>
-        </div>
+      
+        <input 
+        className ="input-small mb-1"
+        type="search"
+        style={{"width":"100%"}}
+        value={props.value}
+        placeholder={props.placeholder}
+        onChange={props.onChange}
+        >
+        </input>
+
 
     )
 }

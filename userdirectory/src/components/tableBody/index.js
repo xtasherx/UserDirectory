@@ -1,61 +1,25 @@
 import React from "react";
 
+function TableBody(props) {
 
-function TableBody () {
-    return (
-        <tbody>
-        <tr>
-            <th>1</th>
-            <td>Row:1 Cell:1</td>
-            <td>Row:1 Cell:2</td>
-            <td>Row:1 Cell:3</td>
-            <td>Row:1 Cell:4</td>
+        return (
+            <tbody>
+                {props.employees.map((emp,i) => (
+                <tr key={i}>
+                    <td><img className="avatar avatar--small" src={emp.picture} alt="employeePhoto"></img></td>
+                    <td >{emp.name}</td>
+                    <td >{emp.phone}</td>
+                    <td >{emp.email}</td>
+                    <td >{emp.city}</td>
+                    <td>{emp.country}</td>
+                </tr>
+                ))}
+            </tbody>
+    
+        )
 
-            <td>Row:1 Cell:5</td>
-        </tr>
-        <tr>
-            <th>2</th>
-            <td>Row:2 Cell:1</td>
-            <td>Row:2 Cell:2</td>
-            <td>Row:2 Cell:3</td>
-            <td>Row:2 Cell:4</td>
-            <td>Row:2 Cell:5</td>
-        </tr>
-        <tr className="selected">
-            <th>3</th>
-            <td>Row:3 Cell:1</td>
-            <td>Row:3 Cell:2</td>
-            <td>Row:3 Cell:3</td>
-            <td>Row:3 Cell:4</td>
-            <td>Row:3 Cell:5</td>
-        </tr>
-        <tr>
-            <th>4</th>
-            <td>Row:4 Cell:1</td>
-            <td>Row:4 Cell:2</td>
-            <td>Row:4 Cell:3</td>
-            <td>Row:4 Cell:4</td>
-            <td>Row:4 Cell:5</td>
-        </tr>
-        <tr>
-            <th>5</th>
-            <td>Row:5 Cell:1</td>
-            <td>Row:5 Cell:2</td>
-            <td>Row:5 Cell:3</td>
-            <td>Row:5 Cell:4</td>
-            <td>Row:5 Cell:5</td>
-        </tr>
-        <tr>
-            <th>6</th>
-            <td>Row:6 Cell:1</td>
-            <td>Row:6 Cell:2</td>
-            <td>Row:6 Cell:3</td>
-            <td>Row:6 Cell:4</td>
-            <td>Row:6 Cell:5</td>
-        </tr>
-    </tbody>
-
-    )
 }
+
+
 
 export default TableBody;
